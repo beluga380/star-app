@@ -29,9 +29,11 @@ st.set_page_config(page_title="AppStar", layout="wide")
 st.markdown("""<style>
 .stApp {background-color: #000000;}
 .stApp, .stApp p, .stApp label {color: #e8e8e8;}
-.block-container {padding-top: 0.4rem; padding-bottom: 0.3rem;
+.block-container {padding-top: 3.2rem; padding-bottom: 0.3rem;
                   max-width: 1000px;}
-header[data-testid="stHeader"] {display: none;}
+/* keep Streamlit's top toolbar (Share, GitHub, the menu with theme,
+   Rerun, Clear cache, Print, Record screen) visible on the black page */
+header[data-testid="stHeader"] {background: #000000;}
 h1, h2, h3 {padding-top: 0 !important; margin: 0 0 0.2rem !important;
             color: #f0f0f0;}
 form.vega-bindings {display: flex; justify-content: center;
